@@ -42,52 +42,6 @@ Todos os registros seguem uma estrutura padronizada:
 
 ---
 
-## 🚀 Como usar no seu projeto
-
-### ✔️ JavaScript / Node.js
-
-```js
-const cidades = require('./city_coords_br.min.json');
-
-// Buscar todas as cidades de MG
-const mg = cidades.filter(c => c.uf === 'MG');
-console.log(mg.length);
-```
-
-### ✔️ Python
-
-```python
-import json
-
-with open("city_coords_br.coords.json", "r", encoding="utf-8") as f:
-    cidades = json.load(f)
-
-sp = [c for c in cidades if c["uf"] == "SP"]
-print(len(sp))
-```
-
-### ✔️ Front-end (colocando em /public)
-
-```js
-fetch('/data/city_coords_br.min.json')
-  .then(r => r.json())
-  .then(cidades => console.log(cidades));
-```
-
----
-
-## 🌎 Casos de Uso Recomendados
-
-* Autocomplete de cidades em formulários
-* Sistemas de cadastro de alunos, clientes ou endereços
-* Módulos de logística / cálculo de rotas
-* Dashboards com mapas (Leaflet, Mapbox, Google Maps)
-* Modelos de machine learning que usam clustering geográfico
-* Validação de dados geográficos
-* Integração com CRMs, ERPs e backends em geral
-
----
-
 ## 📊 Qualidade e Confiabilidade
 
 * Coordenadas no padrão **WGS84**, compatível com todos os sistemas de mapas modernos.
